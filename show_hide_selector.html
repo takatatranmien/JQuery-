@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("input[value='rd1']").click( function(){
+			$("#a").show(  function(){alert("show^^");}  );
+		})
+		$("input[value='rd2']").click( function(){
+			$("#a").hide( function(){alert("hide^^");})
+		})
+	})
+</script>
+</head>
+<body>
+	<p><input type="radio" name="abc" value="rd1" checked>SHOW</p>
+	<p><input type="radio" name="abc" value="rd2">HIDE</p>
+	<div style="background-color:brown;height:200px" id="a">oreore</div>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       	<script language="javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+    </head>
+    <body>
+      <h1>Ex1</h1>
+      <strong>your hobby is? </strong> <br/>
+      <input type="checkbox" id="eat" name="hobby" value="1"/> EAT <br/>
+      
+      <input type="button" id="view1" value="view Name and Type"/>
+      <input type="button" id="view2" value="Change type to textbox"/>
+      <input type="button" id="view3" value="Chang type to checkbox"/></BR>
+      <input type="button" id="view4" value="refresh"/></BR>
+      
+      <script language="javascript">
+		$(document).ready(function(){
+			$("#view1").click(function(){
+				var name=$("#eat").attr("name");
+				var type=$("#eat").attr("type");
+				alert("Name is "+name+" and Type is "+type);
+			});
+			$("#view2").click(function(){
+				$("#eat").attr("type","textbox");
+				
+			});
+			$("#view3").click(function(){
+				$("#eat").attr("type","radio");
+			});
+			$("#view4").click(function(){
+				location.reload();
+			})
+		});
+      </script>  
+    </body>
+</html>

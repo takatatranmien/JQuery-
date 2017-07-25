@@ -1,0 +1,21 @@
+
+<html>
+<head>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("input[value='SHOW']").click( function(){
+			$("#abc").fadeIn(3000,function(){alert("showed !");});
+		})
+		$("input[value='HIDE']").click( function(){
+			$("#abc").fadeOut("fast",function(){alert("hided !");});
+		})
+	})
+</script>
+</head>
+<body>
+  <p><input type="radio" name="radio" value="SHOW" checked> SHOW</p>
+  <p><input type="radio" name="radio" value="HIDE"> HIDE</p>
+  <div style="background-color:brown;height:200px;" id="abc"></div>
+</body>
+</html>

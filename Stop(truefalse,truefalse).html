@@ -1,0 +1,38 @@
+<html>
+<head>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("input[value='radio1']").click(function(){
+			$("#abc").animate({left:'450px'},5000);
+			$("#abc").animate({top:'300px'},5000);
+			$("#abc").animate({left:'0px'},5000);
+			$("#abc").animate({top:'0px'},5000);
+		})
+		$("input[value='radio2']").click(function(){
+			$("#abc").stop(false,true);
+		})
+	})
+	
+	
+</script>
+<style type="text/css">
+    div{
+        background-color:brown;
+        height:50px;
+        width:50px;
+        position:relative;
+   }
+   #pp{
+		color:white;
+		top:500px;
+		left:100px;
+   }
+</style>
+</head>
+<body>
+  <p><input type="radio" name="radio" value="radio1"> START</p>
+  <p><input type="radio" name="radio" value="radio2" checked> FINISH</p>
+  <div id="abc"><p id="pp">OOO</p></div>
+</body>
+</html>

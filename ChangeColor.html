@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>CHANGE COLOR</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script language="javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+        <style type="text/css">
+            .yellow{
+                background: yellow;
+                height: 200px;
+            }
+            
+            .red{
+                background: red;
+                height: 200px;
+            }
+        </style>
+        <script language="javascript">
+			$(document).ready(function(){
+				$("#button-change").click(function(){
+					var obj=$("div");
+					for(var i=0;i<obj.length;i++){
+						if($(obj[i]).hasClass("red")){
+							$(obj[i]).removeClass("red").addClass("yellow");
+						}else if($(obj[i]).hasClass("yellow")){
+							$(obj[i]).removeClass("yellow").addClass("red");
+						}
+					}
+				});
+			});
+		
+        </script>
+    </head>
+    <body>
+        <div class="yellow">DIV 1</div>
+        <div class="red">DIV 2</div>
+		<div>DIV 3<div>
+        <input type="button" value="CHANGE COLOR" id="button-change"/>
+    </body>
+</html>
